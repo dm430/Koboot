@@ -1,2 +1,2 @@
 # Koboot
-Koboot is a library of knockout components styled with bootstrap. 
+Koboot is a library of components for Knockout.js, styled using Twitter Bootstrap. 
