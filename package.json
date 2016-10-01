@@ -1,0 +1,34 @@
+{
+  "name": "koboot",
+  "version": "1.0.0",
+  "description": "Koboot is a library of components for Knockout.js, styled using Twitter Bootstrap.",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dm430/Koboot.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "knockout",
+    "js"
+  ],
+  "author": "Dm430",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dm430/Koboot/issues"
+  },
+  "homepage": "https://github.com/dm430/Koboot#readme",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "browserify-global-shim": "^1.0.3",
+    "gulp": "^3.9.1",
+    "stringify": "^5.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

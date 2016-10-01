@@ -1,0 +1,25 @@
+<ul class="ppc-ul list-group scrollable-menu" data-bind="foreach: treeRoots">
+	<a class="btn btn-text-left list-group-item" data-bind="click: $component.selectedNode, css: { active: $component.selectedNode() == $data }">
+		<span data-bind="click: toggle, visible: canExpand">
+    	<span data-bind="visible: canExpand">
+				<span class="glyphicon glyphicon-plus-sign tree-plus-minus-szie" data-bind="visible: !isExpanded()"></span>
+				<span class="glyphicon glyphicon-minus-sign tree-plus-minus-szie" data-bind="visible: isExpanded"></span>
+			</span>
+		</span>
+		<span data-bind="text: displayText"></span>
+	</a>
+
+	<div data-bind="if: isExpanded">
+		<ul class="ppc-ul" data-bind="foreach: childNodes">
+			<a class="btn btn-text-left list-group-item" data-bind="click: $component.selectedNode, css: { active: $component.selectedNode() == $data }">
+				<span data-bind="click: toggle, visible: canExpand">
+    			<span data-bind="visible: canExpand">
+						<span class="glyphicon glyphicon-plus-sign tree-plus-minus-szie" data-bind="visible: !isExpanded()"></span>
+						<span class="glyphicon glyphicon-minus-sign tree-plus-minus-szie" data-bind="visible: isExpanded"></span>
+					</span>
+				</span>
+				<span data-bind="text: displayText"></span>
+			</a>
+		</ul>
+	</div>
+</ul>
