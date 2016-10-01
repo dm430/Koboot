@@ -1,9 +1,7 @@
 # Koboot
 Koboot is a library of components for Knockout.js, styled using Twitter Bootstrap. 
 
-# Getting Started  
-
-###Building Koboot
+# Building Koboot
 If you would like to build Kobot from source clone the repository and run the following commands in your command line.
 
 ```
@@ -13,7 +11,7 @@ gulp
 
 If you would like Koboot to rebuild as soon as you save any file under the `src` directory, you can run `gulp watch`.
 
-### Using Koboot
+# Using Koboot 
 
 In order to start using Koboot you will have to add it and the following dependencies added to your webpage.
 * Bootstrap
