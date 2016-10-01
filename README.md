@@ -11,7 +11,7 @@ npm install
 gulp
 ```
 
-you can also run `gulp watch` if you would like Koboot to rebuild as soon as you save any file under the `src` directory.
+If you would like Koboot to rebuild as soon as you save any file under the `src` directory, you can run `gulp watch`.
 
 ### Using Koboot
 
