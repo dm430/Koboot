@@ -1,5 +1,3 @@
-window.kb = {};
-
 kb.TreeNodeMapping = {
   create: function (args) {
     return new kb.TreeNode(args.data);
