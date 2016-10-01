@@ -1,9 +1,11 @@
 <html>
 
 <body>
-  <like-widget params="value: test"></like-widget>
+  <div>This tree view is using mapping.</div>
+  <tree-view params="treeRoots: rootsData, selected: selectedNodeData"></tree-view>
 
-  <tree-view params="treeRoots: testRoots, selected: testSelectedNode"></tree-view>
+  <div>This tree view is using a array of new TreeNodes.</div>
+  <tree-view params="treeRoots: rootsApi, selected: selectedNodeApi"></tree-view>
 
   <!-- Koboot dependencies -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

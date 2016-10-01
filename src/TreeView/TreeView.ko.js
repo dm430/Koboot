@@ -19,8 +19,10 @@ function TreeViewModel(params) {
   self.selectedNode = params.selected;
 }
 
-kb.TreeNode = function (data) {
+kb.TreeNode = function (data, children) {
   var self = this;
+
+  self.childNodes = children || ko.observableArray();
 
   self.isExpanded = ko.observable(false);
 
@@ -31,8 +33,12 @@ kb.TreeNode = function (data) {
   self.toggle = function () {
     self.isExpanded(!self.isExpanded());
   }
-
-  ko.mapping.fromJS(data, childMapping, self);
+  
+  if (data instanceof Object) {
+    ko.mapping.fromJS(data, childMapping, self);
+  } else {
+    self.displayText = data;
+  }
 }
 
 module.exports = {
