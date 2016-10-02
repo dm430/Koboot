@@ -1,28 +1,29 @@
-function MyViewModel() {
-    var self = this;
+'use strict';
 
-    var data = [
-        {
-            displayText: "test 1", childNodes: [
-                { displayText: "test 1- sub" }
-            ]
-        },
-        { displayText: "test 2" },
-        { displayText: "test 3" }
-    ];
+let data = [
+  {
+    displayText: 'Test A item 1',
+    childNodes: [{ displayText: 'Test B item 1 child' }]
+  },
+  { displayText: 'test A item 2' }
+];
 
-    self.rootsData = ko.mapping.fromJS(data, kb.TreeNodeMapping);
-    self.selectedNodeData = ko.observable(self.rootsData()[0]);
+let dataNodes = ko.observableArray([
+  kb.treeView.createTreeNode('Test B item 1', ko.observable(
+    [ kb.treeView.createTreeNode('Test B item 1 child') ]
+  )),
+  kb.treeView.createTreeNode('Test B item 2')
+]);
 
-    var dataNodes = ko.observableArray([
-        new kb.TreeNode("Test item 1", ko.observable([
-            new kb.TreeNode("Test sub item1")
-        ])),
-        new kb.TreeNode("Test item 2")
-    ]);
+let viewModel = {
+  rootsData: ko.mapping.fromJS(data, kb.treeView.rootNodeMapping),
+  selectedNodeData: function() {
+    return () => ko.observable(this.rootsData()[0]);
+  },
+  rootsApi: dataNodes,
+  selectedNodeApi: function() {
+    return () => ko.observable(this.rootsApi()[0]);
+  }
+};
 
-    self.rootsApi= dataNodes;
-    self.selectedNodeApi = ko.observable(self.rootsApi()[0]);
-}
-
-ko.applyBindings(new MyViewModel());
+ko.applyBindings(viewModel);

@@ -2,12 +2,15 @@
   "name": "koboot",
   "version": "1.0.0",
   "description": "Koboot is a library of components for Knockout.js, styled using Twitter Bootstrap.",
-  "main": "gulpfile.js",
+  "main": "build/Kobot.ko.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 'write tests pls'",
+    "clean": "rm build/*",
+    "build": "browserify src/Koboot.ko.js -t [ stringify --extensions [.html] ] > build/Koboot.js",
+    "postbuild": "uglifyjs build/Koboot.js -c -o build/Koboot.js"
   },
   "repository": {
     "type": "git",
@@ -23,12 +26,20 @@
   "bugs": {
     "url": "https://github.com/dm430/Koboot/issues"
   },
+  "browser": {},
   "homepage": "https://github.com/dm430/Koboot#readme",
   "devDependencies": {
     "browserify": "^13.1.0",
-    "browserify-global-shim": "^1.0.3",
-    "gulp": "^3.9.1",
+    "eslint": "^3.7.0",
     "stringify": "^5.1.0",
-    "vinyl-source-stream": "^1.1.0"
+    "uglify-js": "git://github.com/mishoo/UglifyJS2#harmony"
+  },
+  "dependencies": {
+    "assert-plus": "^1.0.0",
+    "bootstrap": "^3.3.7",
+    "debug": "^2.2.0",
+    "jquery": "^3.1.1",
+    "knockout": "^3.4.0",
+    "knockout-mapping": "^2.6.0"
   }
 }

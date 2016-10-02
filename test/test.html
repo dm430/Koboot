@@ -1,22 +1,23 @@
 <html>
+  <meta charset="utf-8" />
+  <head>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div>This tree view is using mapping.</div>
+    <tree-view params="treeRoots: rootsData, selected: selectedNodeData"></tree-view>
 
-<body>
-  <div>This tree view is using mapping.</div>
-  <tree-view params="treeRoots: rootsData, selected: selectedNodeData"></tree-view>
+    <div>This tree view is using a array of new TreeNodes.</div>
+    <tree-view params="treeRoots: rootsApi, selected: selectedNodeApi"></tree-view>
 
-  <div>This tree view is using a array of new TreeNodes.</div>
-  <tree-view params="treeRoots: rootsApi, selected: selectedNodeApi"></tree-view>
-
-  <!-- Koboot dependencies -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
-
-  <!-- Koboot build -->
-  <script type="text/javascript" src="../build/Koboot.js"></script>
-
-  <!-- This is the testing code. -->
-  <script type="text/javascript" src="../test/test.ko.js"></script>
-</body>
+    <!-- scripts -->
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+    <script type="text/javascript" src="../node_modules/knockout-mapping/dist/knockout.mapping.min.js"></script>
+    <script type="text/javascript" src="../build/Koboot.js"></script>
+    <script type="text/javascript" src="./test.ko.js"></script>
+  </body>
 
 </html>
